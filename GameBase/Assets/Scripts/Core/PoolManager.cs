@@ -80,7 +80,8 @@ public class PoolManager
         }
         _pools[go.name].Push(go);
         return true;
-    }
+    }  
+
     public void Clear()
     {
         _pools.Clear();

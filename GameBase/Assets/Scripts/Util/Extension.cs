@@ -26,7 +26,7 @@ public static class Extension
         }
         foreach(Transform child in children)
         {
-            //Managers.Resources.Destroy(child.GameObject);
+            Managers.Resource.Destroy(child.gameObject);
         }
     }
     public static void Shuffle<T>(this IList<T> list)
