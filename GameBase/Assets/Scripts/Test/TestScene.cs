@@ -20,5 +20,9 @@ public class TestScene : MonoBehaviour
         {
             Managers.Object.Spawn<MonsterController>(new Vector3(Random.Range(0, 10), Random.Range(0, 10), Random.Range(0, 10)));
         }
+        if (Input.GetKeyUp(KeyCode.F1))
+        {
+            Managers.UI.ShowToast("123124");
+        }
     }
 }
