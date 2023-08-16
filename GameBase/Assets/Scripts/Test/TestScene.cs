@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Define;
 
 public class TestScene : MonoBehaviour
 {
@@ -31,6 +32,17 @@ public class TestScene : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.F5))
         {
             Managers.Game.Gold += 1;
+        }
+        if(Input.GetKeyUp(KeyCode.F6))
+        {
+            Managers.Game.AddEquipment("1");
+        }
+        if(Input.GetKeyUp(KeyCode.F7))
+        {
+            Managers.Game.AddMaterialItem(ID_BRONZE_KEY, 1);
+            Managers.Game.AddMaterialItem(ID_SILVER_KEY, 1);
+            Managers.Game.AddMaterialItem(ID_GOLD_KEY, 1);
+
         }
     }
 }
