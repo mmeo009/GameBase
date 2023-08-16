@@ -10,6 +10,10 @@ public class TestScene : MonoBehaviour
         Managers.Resource.LoadAllAsync<Object>("PreLoad", (key, count, totalCount) =>
             {
             Debug.Log("key :" + key + "Count : " + count + "TotalCount : " + totalCount);
+                if(count == totalCount)
+                {
+                    Managers.Game.Init();
+                }
         });
     }
 
@@ -23,6 +27,10 @@ public class TestScene : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.F1))
         {
             Managers.UI.ShowToast("123124");
+        }
+        if(Input.GetKeyUp(KeyCode.F5))
+        {
+            Managers.Game.Gold += 1;
         }
     }
 }
